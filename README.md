@@ -19,3 +19,5 @@ python parameterBoard.py --num_nets 200 --part_nets_per_round 30 --fl_round 100 
 <img src="https://user-images.githubusercontent.com/88427588/156745935-06178c8e-ca51-4cd2-8ac0-72d40477ac35.png" width="70%"/>
 </div>
 
+
+Email: Fungiiizhang@163.com (Zhang Fangjiao)
