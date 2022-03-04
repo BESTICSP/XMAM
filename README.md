@@ -6,7 +6,7 @@ We can run 2000 iterations to get the converged global model ï¼ˆe.g., pre-modelï
 python parameterBoard.py --num_nets 200 --part_nets_per_round 30 --fl_round 2000 --dataname cifar10 --model vgg9 --save_model True --device cuda:0
 ```
 
-
+or contact me to get the pre-model *cifar10_vgg9.pt*.
 
 
 Then, we can change the parameter `--backdoor_type` (trigger|semantic|edge-case) and `--defense_method` (none|krum|multi-krum|ndc|rfa|rsa|XMAM) to reproduce the Fig.9 in our paper:
