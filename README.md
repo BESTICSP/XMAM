@@ -5,4 +5,4 @@ python parameterBoard.py --num_nets 200 --part_nets_per_round 30 --fl_round 100 
 ```
 
 We can change the parameter `--backdoor_type` (trigger|semantic|edge-case) and `--defense_method` (none|krum|multi-krum|ndc|rfa|rsa|XMAM) to reproduce the Fig.9 in our paper:
-![image](https://user-images.githubusercontent.com/88427588/156745935-06178c8e-ca51-4cd2-8ac0-72d40477ac35.png)
+![image](https://user-images.githubusercontent.com/88427588/156745935-06178c8e-ca51-4cd2-8ac0-72d40477ac35.png){:height="50%" width="50%"}
