@@ -46,7 +46,7 @@ if __name__ == "__main__":
     parser.add_argument('--poisoned_portion', type=float, default=0.3, help='posioning portion (float, range from 0 to 1, default: 0.1)')
     parser.add_argument('--attack_mode', type=str, default="none", help='attack method used: none|stealthy|pgd|replacement')
     parser.add_argument('--pgd_eps', type=float, default=5e-2, help='the eps of pgd')
-    parser.add_argument('--backdoor_type', type=str, default="edge-case", help='backdoor type used: none|trigger|semantic|edge-case|')
+    parser.add_argument('--backdoor_type', type=str, default="none", help='backdoor type used: none|trigger|semantic|edge-case|')
     parser.add_argument('--model_scaling', type=float, default=1, help='model replacement technology')
 
     # parameters for untargeted attacker
