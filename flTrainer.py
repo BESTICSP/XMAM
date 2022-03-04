@@ -474,9 +474,9 @@ class FederatedLearningTrainer(ParameterContainer):
             logger.info("=====Backdoor task test accuracy=====: {}".format(backdoor_acc))
 
             if self.save_model == True:
-                # if (overall_acc > 0.8) or flr == 2:
-                if flr == 50:
-                    torch.save(self.net_avg.state_dict(), "savedModel/mnist_lenet.pt")
+                # if (overall_acc > 0.8) or flr == 2000:
+                if flr == 2000:
+                    torch.save(self.net_avg.state_dict(), "savedModel/cifar10_vgg9.pt")
                     # sys.exit()
 
             fl_iter_list.append(flr)
@@ -492,7 +492,7 @@ class FederatedLearningTrainer(ParameterContainer):
                             'the chosen ones': client_chosen,
                             })
 
-        results_filename = '101010__1-{}_2-{}_3-{}_4-{}_5-{}_6-{}_7-{}_8-{}_9-{}_10-{}_11-{}_12-{}_13-{}_14-{}_15-{}_16-{}' \
+        results_filename = '1-{}_2-{}_3-{}_4-{}_5-{}_6-{}_7-{}_8-{}_9-{}_10-{}_11-{}_12-{}_13-{}_14-{}_15-{}_16-{}' \
                            '_17-{}_18-{}_19-{}_20-{}_21-{}_22-{}'.format(
             self.dataname,  #1
             self.partition_strategy,  #2
