@@ -1,4 +1,4 @@
-# XMAM
+# XMAM:X-raying Models with A Matrix to Reveal Backdoor Attacks for Federated Learning
 
 
 We can run 2000 iterations to get the converged global model （e.g., pre-model）:
