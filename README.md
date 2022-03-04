@@ -1,6 +1,15 @@
 # XMAM:X-raying Models with A Matrix to Reveal Backdoor Attacks for Federated Learning
 
 
+
+Experimental environment:
+
+Python                  3.6.13
+torch                   1.8.0+cu111
+torchvision             0.9.0+cu111
+hdbscan                 0.8.27
+
+
 We can run 2000 iterations to get the converged global model （e.g., pre-model）:
 ```
 python parameterBoard.py --num_nets 200 --part_nets_per_round 30 --fl_round 2000 --dataname cifar10 --model vgg9 --save_model True --device cuda:0
