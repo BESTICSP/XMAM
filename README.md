@@ -12,7 +12,7 @@ hdbscan                 0.8.27
 
 We can run 2000 iterations to get the converged global model （e.g., pre-model）:
 ```
-python parameterBoard.py --lr 0.02 --num_nets 200 --part_nets_per_round 30 --fl_round 2000 --dataname cifar10 --model vgg9 --save_model True --device cuda:0
+python parameterBoard.py --lr 0.02 --num_nets 200 --part_nets_per_round 30 --fl_round 2000 --malicious_ratio 0 --dataname cifar10 --model vgg9 --save_model True --device cuda:0
 ```
 
 or contact me to get the pre-model *cifar10_vgg9.pt*.
