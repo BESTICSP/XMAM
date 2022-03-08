@@ -298,10 +298,10 @@ class FederatedLearningTrainer(ParameterContainer):
                 selected_node_indices = np.random.choice(nets_list, size=self.part_nets_per_round, replace=False)
             elif self.client_select == 'fix-frequency':
                 selected_node_mali = np.random.choice(nets_list[ :int(self.num_nets * self.malicious_ratio)],
-                                            size=int(self.part_nets_per_round * self.malicious_ratio), replace=False)
+                                            size=round(self.part_nets_per_round * self.malicious_ratio), replace=False)
                 selected_node_mali = selected_node_mali.tolist()
                 selected_node_benign = np.random.choice(nets_list[int(self.num_nets * self.malicious_ratio): ],
-                                            size=int(self.part_nets_per_round * (1-self.malicious_ratio)), replace=False)
+                                            size=round(self.part_nets_per_round * (1-self.malicious_ratio)), replace=False)
                 # selected_node_benign = np.array([0])
                 selected_node_benign = selected_node_benign.tolist()
                 selected_node_mali.extend(selected_node_benign)
