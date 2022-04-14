@@ -120,29 +120,6 @@ def malicious_train(model, global_model_pre, whole_data_loader, clean_data_loade
             p.data = whole_aggregator[param_index]
 
 
-    ###################################################################### untargeted attacks
-    if untargeted_type == 'sign-flipping':
-        whole_aggregator = []
-        for p_index, p in enumerate(model.parameters()):
-            params_aggregator = list(global_model_pre.parameters())[p_index].data - \
-                                10*(list(model.parameters())[p_index].data -
-                                   list(global_model_pre.parameters())[p_index].data)
-            whole_aggregator.append(params_aggregator)
-
-        for param_index, p in enumerate(model.parameters()):
-            p.data = whole_aggregator[param_index]
-
-    elif untargeted_type == 'same-value':
-        whole_aggregator = []
-        for p_index, p in enumerate(model.parameters()):
-            params_aggregator = list(global_model_pre.parameters())[p_index].data + \
-                                1*torch.sign(list(model.parameters())[p_index].data -
-                                   list(global_model_pre.parameters())[p_index].data)
-            whole_aggregator.append(params_aggregator)
-
-        for param_index, p in enumerate(model.parameters()):
-            p.data = whole_aggregator[param_index]
-
     return model
 
 def test_model(model, data_loader, device, print_perform=False):
