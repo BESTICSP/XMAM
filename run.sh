@@ -20,7 +20,6 @@ python parameterBoard.py \
 --dir_parameter 0.5 \
 --malicious_ratio 0.2 \
 --backdoor_type none \
---untargeted_type none \
 --trigger_label 0 \
 --poisoned_portion 0.3 \
 --attack_mode pgd \
@@ -49,7 +48,6 @@ python parameterBoard.py \
 --dir_parameter 0.5 \
 --malicious_ratio 0.2 \
 --backdoor_type edge-case \
---untargeted_type none \
 --trigger_label 0 \
 --semantic_label 2 \
 --poisoned_portion 0.3 \
