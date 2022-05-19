@@ -30,12 +30,12 @@ python parameterBoard.py --lr 0.00036 --num_nets 200 --part_nets_per_round 30 --
 
 
 
-代码遵循MIT协议。
+MIT license
 
-代码作者：张方佼
+Programmer: Fangjiao Zhang, Qichao Jin
 
-Programmer: Fangjiao Zhang
+Email: fungiiizhang@163.com zjy@besti.edu.cn
 
-Email：fungiiizhang@163.com zjy@besti.edu.cn
+Under review
 
 北京电子科技学院CSP实验室
