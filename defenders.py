@@ -184,7 +184,8 @@ class XMAM(Defense):
                 x_ray = data[0:1]
                 break
         else:
-            for data, target in x_ray_loader[1]:
+#             for data, target in x_ray_loader[1]:
+            for data, target in x_ray_loader:
                 x_ray = data[0:1]
                 break
 
