@@ -136,7 +136,7 @@ class xmam_attack(Attack):
             self.defender = XMAM()
             net_list, chosens = self.defender.exec(client_models=client_models, x_ray_loader=x_ray_loader,
                                                    global_model_pre=global_model_pre,
-                                                   g_user_indices=g_user_indices, device=device)
+                                                   g_user_indices=g_user_indices, device=device, malicious_ratio=malicious_num)
             print(chosens)
 
         return client_models
