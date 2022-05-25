@@ -90,7 +90,7 @@ class xmam_attack(Attack):
     def __init__(self, *args, **kwargs):
         pass
 
-    def exec(self, client_models, malicious_num, global_model_pre, expertise, x_ray_loader, num_workers, num_dps, g_user_indices, device, *args, **kwargs):
+    def exec(self, client_models, malicious_num, global_model_pre, expertise, x_ray_loader, num_workers, num_dps, g_user_indices, device, untargeted_type, *args, **kwargs):
 
         s = copy.deepcopy(global_model_pre)
         if expertise == 'full-knowledge':
@@ -136,7 +136,7 @@ class xmam_attack(Attack):
             self.defender = XMAM()
             net_list, chosens = self.defender.exec(client_models=client_models, x_ray_loader=x_ray_loader,
                                                    global_model_pre=global_model_pre,
-                                                   g_user_indices=g_user_indices, device=device, malicious_ratio=malicious_num)
+                                                   g_user_indices=g_user_indices, device=device, malicious_ratio=malicious_num, untargeted_type=untargeted_type)
             print(chosens)
 
         return client_models

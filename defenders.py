@@ -176,7 +176,7 @@ class XMAM(Defense):
     def __init__(self, *args, **kwargs):
         pass
 
-    def exec(self, client_models, x_ray_loader, global_model_pre, g_user_indices, device, malicious_ratio, *args, **kwargs):
+    def exec(self, client_models, x_ray_loader, global_model_pre, g_user_indices, device, malicious_ratio, untargeted_type, *args, **kwargs):
 
         # for data, target in x_ray_loader[1]:
         if malicious_ratio == 0:
@@ -184,10 +184,15 @@ class XMAM(Defense):
                 x_ray = data[0:1]
                 break
         else:
-#             for data, target in x_ray_loader[1]:
-            for data, target in x_ray_loader:
-                x_ray = data[0:1]
-                break
+            if untargeted_type == 'none':
+                for data, target in x_ray_loader[1]:
+                    x_ray = data[0:1]
+                    break
+            else:
+                for data, target in x_ray_loader:
+                    x_ray = data[0:1]
+                    break
+
 
         x_ray = x_ray.to(device)
         x_ray = torch.ones_like(x_ray)

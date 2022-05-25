@@ -372,7 +372,7 @@ class FederatedLearningTrainer(ParameterContainer):
                                               global_model_pre=self.net_avg, expertise='full-knowledge',
                                               x_ray_loader=x_ray_loader,
                                               num_workers=self.part_nets_per_round, num_dps=net_data_number,
-                                              g_user_indices=g_user_indices, device=self.device)
+                                              g_user_indices=g_user_indices, device=self.device, untargeted_type=self.untargeted_type)
 
             ########################################################################################## defense process
             if self.defense_method == "none":
@@ -406,7 +406,7 @@ class FederatedLearningTrainer(ParameterContainer):
                 x_ray_loader = create_train_data_loader(self.dataname, xmam_data, self.trigger_label,
                              self.poisoned_portion, self.batch_size, [0], malicious=False)
                 net_list, chosens = self.defender.exec(client_models=net_list, x_ray_loader=train_loader_list[0], global_model_pre=self.net_avg,
-                                                g_user_indices=g_user_indices, device=self.device, malicious_ratio=self.malicious_ratio)
+                                                g_user_indices=g_user_indices, device=self.device, malicious_ratio=self.malicious_ratio, untargeted_type=self.untargeted_type)
 
             elif self.defense_method == "ndc":
                 chosens = 'none'
