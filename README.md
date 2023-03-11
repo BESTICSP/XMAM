@@ -36,6 +36,6 @@ Programmer: Fangjiao Zhang, Qichao Jin
 
 Email: fungiiizhang@163.com zjy@besti.edu.cn
 
-Under review
+Zhang J, Zhang F, Jin Q, Wang Z, Lin X, Hei X. XMAM: X-raying models with a matrix to reveal backdoor attacks for federated learning. Digital Communications and Networks. 2023 Jan 24.
 
 北京电子科技学院CSP实验室
